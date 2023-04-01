@@ -135,7 +135,7 @@ class CloudMiningApp(web.application, object):
         self.ui_sort_by = ui_sort_by
 
     def set_ui_instance(self,
-        instance_name='Demo', description='This is a demo of CloudMining'):
+        instance_name='VEXSearch', description='Search Engine'):
         """Sets ui element instance name and description."""
         self.instance_name = instance_name
         self.description = description

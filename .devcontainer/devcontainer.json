@@ -1,0 +1,4 @@
+{
+	"name": "Python 2.7.6 Dev Container",
+	"dockerFile": "Dockerfile"
+}
