@@ -1,18 +1,10 @@
-$ other_instances = ('DBLP', 'CompSci', 'http://dblp.cloudmining.net', 'IMDb', 'movies', 'http://imdb.cloudmining.net', 'MEDLINE', 'biomedical', 'http://medline.cloudmining.net')
-
 <div class="header">
 <div class="info">
     <ul>
-    <li><a href="https://github.com/alexksikes/cloudmining">About</a></li>
-    <li><a href="mailto:alex.ksikes@gmail.com?subject=$config.instance_name - CloudMining">Feedback</a></li>
+    <li><a href="">About</a></li>
+    <li><a href="">Feedback</a></li>
     $if config.expose:
-        <li><a href="/directory/">Directory</a></li>
-    <li class="last">
-        <select class="other_instances">
-        $for name, desc, url in group(other_instances, 3):
-            <option value="$url" $cond(name == config.instance_name, "selected", "")>$name - $desc</option>
-        </select>
-    </li>
+        <li><a href="/directory/">Directory</a></li>		
     </ul>
 </div>
 </div>

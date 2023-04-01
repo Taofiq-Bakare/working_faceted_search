@@ -8,6 +8,7 @@ body {
     font-family: Helvetica, sans-serif;
     font-size: 13px;
     padding-bottom: 5px;
+    background-color: beige;
 }
 
 a {
@@ -27,7 +28,7 @@ li {
 /* header bar */
 .header 
 {
-    background: #F5F8FC;
+    background: #E2EFCB;
     border-bottom: 2px dotted #D1D6DF;
     height: 22px;
     padding: 5px 0px;
@@ -82,7 +83,7 @@ li {
 
 /* search bar */
 .search_bar {
-    background: #F5F8FC;
+    background: #E2EFCB;
     border: 2px dotted #D1D6DF;
     border-top: none;
     /*border-radius: 0 0 7px 7px;*/
@@ -96,7 +97,7 @@ li {
 .search_bar h1 {
     position: relative;
     top: -25px;
-    width: 239px;
+    width: 100px;
     padding: 0 5px;
 }
 
@@ -117,7 +118,7 @@ li {
 
 .search_form .submit {
     font-weight: normal;
-    margin-left: 5px;
+    margin-left: 15px;
     margin-top: 3px;
 }
 
@@ -127,7 +128,7 @@ li {
 
 .search_form .search_entry {
     float: left;
-    background-color: #8FB5FF;
+    background-color: #D24C41;
     border: medium none;
     border-radius: 7px;
     padding: 3px 11px 3px 5px;
@@ -254,7 +255,7 @@ h3 {
 }
 
 .results .even {
-    background: #F5F8FC;
+    background: #EFF9A8;
 }
 
 .results .last {
@@ -688,7 +689,7 @@ div.more {
 
 .front_page .search_form input {
     color: #3F3B3B;
-    text-align: right;
+    text-align: center;
     font-size: 14px;
 }
 
