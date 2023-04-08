@@ -1,0 +1,5 @@
+test.txt
+cloudmining/__init__.pyc
+*.pyc
+cloudmining/api.pyc
+cloudmining/public/img.tar.gz
