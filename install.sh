@@ -29,6 +29,7 @@ wget https://github.com/alexksikes/cloudmining/tarball/master -O cloudmining_
 wget https://github.com/alexksikes/SimSearch/tarball/master -O SimSearch_
 wget https://github.com/jsocol/sphinxapi/tarball/master -O sphinxapi_
 wget https://github.com/alexksikes/mass-scraping/tarball/master -O mass-scraping_
+dos2unix install.sh start_application.sh
 
 # Create Dirs
 mkdir fSphinx cloudmining SimSearch sphinxapi mass-scraping
