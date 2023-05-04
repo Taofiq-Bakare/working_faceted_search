@@ -10,6 +10,12 @@ sudo apt-get -qq install redis-server -y
 sudo apt-get -qq install  mysql-server -y  # Silent Install
 sudo apt-get -qq install sphinxsearch -y
 sudo apt-get install software-properties-common
+sudo locale-gen en_US.UTF-8
+sudo update-locale LANG=en_US.UTF-8
+sudo update-locale LC_ALL=en_US.UTF-8 LANG=en_US.UTF-8
+
+
+
 
 # Install Python Modules
 echo
@@ -74,12 +80,13 @@ cd ../
 # Configure
 # 1. Create mysql account for fsphinx
 
-sudo mysql -uroot -ppassword <<MYSQL_SCRIPT
+sudo mysql -uroot -proot <<MYSQL_SCRIPT
 CREATE DATABASE fsphinx;
 CREATE USER 'fsphinx'@'localhost' IDENTIFIED BY 'fsphinx';
 GRANT ALL ON fsphinx.* TO 'fsphinx'@'localhost';
 FLUSH PRIVILEGES;
 MYSQL_SCRIPT
+
 
 # 2. Load sample data
 sudo mysql -ufsphinx -pfsphinx -Dfsphinx < ./fSphinx/tutorial/sql/imdb_top400.data.sql
