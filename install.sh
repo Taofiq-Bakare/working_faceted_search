@@ -8,7 +8,23 @@ sudo apt-get -qq upgrade -y
 sudo apt-get install dos2unix
 sudo apt-get -qq install build-essential -y
 sudo apt-get -qq install redis-server -y
-sudo apt-get -qq install  mysql-server -y  # Silent Install
+# sudo apt-get -qq install  mysql-server -y  # Silent Install
+sudo apt-get install mysql-server
+sudo service mysql start
+sudo mysql_secure_installation
+
+sudo mysql -u root -p <<MYSQL_SCRIPT
+CREATE DATABASE fsphinx;
+CREATE USER 'fsphinx'@'localhost' IDENTIFIED BY 'fsphinx';
+GRANT ALL PRIVILEGES ON fsphinx.* TO 'fsphinx'@'localhost';
+FLUSH PRIVILEGES;
+MYSQL_SCRIPT
+
+
+
+2. Load sample data
+sudo mysql -ufsphinx -pfsphinx -Dfsphinx < ./fSphinx/tutorial/sql/imdb_top400.data.sql
+
 sudo apt-get -qq install sphinxsearch -y
 sudo apt install nano
 sudo apt-get install software-properties-common
@@ -82,17 +98,17 @@ cd ../
 # Configure
 # 1. Create mysql account for fsphinx
 
-sudo mysql -u root -p <<MYSQL_SCRIPT
-CREATE DATABASE fsphinx;
-CREATE USER 'fsphinx'@'localhost' IDENTIFIED BY 'fsphinx';
-GRANT ALL PRIVILEGES ON fsphinx.* TO 'fsphinx'@'localhost';
-FLUSH PRIVILEGES;
-MYSQL_SCRIPT
+# sudo mysql -u root -p <<MYSQL_SCRIPT
+# CREATE DATABASE fsphinx;
+# CREATE USER 'fsphinx'@'localhost' IDENTIFIED BY 'fsphinx';
+# GRANT ALL PRIVILEGES ON fsphinx.* TO 'fsphinx'@'localhost';
+# FLUSH PRIVILEGES;
+# MYSQL_SCRIPT
 
 
 
 # 2. Load sample data
-sudo mysql -ufsphinx -pfsphinx -Dfsphinx < ./fSphinx/tutorial/sql/imdb_top400.data.sql
+# sudo mysql -ufsphinx -pfsphinx -Dfsphinx < ./fSphinx/tutorial/sql/imdb_top400.data.sql
 sudo service redis-server start
 sudo service mysql start
 # 3. Setup environment to run testcode
